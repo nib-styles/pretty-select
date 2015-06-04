@@ -1,0 +1,78 @@
+/*
+ * Custom Select
+ */
+
+.selectbox {
+  background: hsl(0, 0%, 100%);
+  position: relative;
+  cursor: pointer;
+  text-transform: none;
+  text-align: left;
+  vertical-align: bottom;
+  display: inline-block;
+
+  min-width: 270px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top:18px;
+    right: 15px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid hsl(0, 0%, 27%);
+  }
+
+  &.is-open:after {
+    top: 16px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid hsl(0, 0%, 27%);
+    border-top: 0;
+  }
+}
+
+.selectbox__selected {
+  color: hsl(134, 100%, 29%);
+  line-height: 20px;
+  padding: 10px;
+  height: 20px;
+}
+
+.selectbox__menu {
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+  top: 40px;
+  left: 0;
+  transition: all ease 0.5s;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid transparent;
+  max-height: 0;
+
+  .selectbox.is-open & {
+    max-height: 300px;
+    border: 1px solid hsl(0, 0%, 87%);
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
+  }
+}
+
+.selectbox__option {
+  border-bottom: 1px solid hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 33%);
+  transition: all ease 0.25s;
+  padding: 10px;
+
+  &:hover {
+    background: hsl(0, 0%, 97%);
+    color: hsl(134, 100%, 29%);
+  }
+
+  &:focus,
+  &.is-focussed {}
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

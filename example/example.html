@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    </head>
+    <link href="../build/build.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        body {
+            padding: 40px;
+            background: #009423;
+        }
+    </style>
+<body>
+
+<div class="selectbox js-select">
+    <div class="selectbox__selected js-selected"></div>
+    <div class="selectbox__menu js-menu">
+        <div class="selectbox__option" data-value="avoid-tax">Cover to avoid tax</div>
+        <div class="selectbox__option" data-value="cheaper-cover">Something cheaper</div>
+        <div class="selectbox__option" data-value="health-concern">A specific health concern</div>
+        <div class="selectbox__option" data-value="better-cover">Looking for better cover</div>
+        <div class="selectbox__option" data-value="compare-cover">Just want to compare</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var select = document.querySelector('.js-select');
+    select.addEventListener('click', function() {
+        this.classList.toggle('is-open');
+    });
+</script>
+
+</body>
+</html>

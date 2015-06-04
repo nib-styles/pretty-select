@@ -1,0 +1,59 @@
+/*
+ * Custom Select
+ */
+.selectbox {
+  background: white;
+  position: relative;
+  cursor: pointer;
+  text-transform: none;
+  text-align: left;
+  vertical-align: bottom;
+  display: inline-block;
+  min-width: 270px; }
+  .selectbox:after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #454545; }
+  .selectbox.is-open:after {
+    top: 16px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #454545;
+    border-top: 0; }
+
+.selectbox__selected {
+  color: #009423;
+  line-height: 20px;
+  padding: 10px;
+  height: 20px; }
+
+.selectbox__menu {
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+  top: 40px;
+  left: 0;
+  transition: all ease 0.5s;
+  width: 100%;
+  background-color: white;
+  border: 1px solid transparent;
+  max-height: 0; }
+  .selectbox.is-open .selectbox__menu {
+    max-height: 300px;
+    border: 1px solid #dedede;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+
+.selectbox__option {
+  border-bottom: 1px solid #dedede;
+  color: #545454;
+  transition: all ease 0.25s;
+  padding: 10px; }
+  .selectbox__option:hover {
+    background: #f7f7f7;
+    color: #009423; }
+  .selectbox__option:last-child {
+    border-bottom: 0; }

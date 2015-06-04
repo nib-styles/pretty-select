@@ -1,0 +1,8 @@
+{
+  "name": "select",
+  "styles": ["index.css"],
+  "development": {
+    "dependencies": {
+    }
+  }
+}
