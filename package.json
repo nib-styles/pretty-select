@@ -1,0 +1,9 @@
+{
+  "name": "@nib-styles/select",
+  "version": "0.1.0",
+  "main.css": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nib-styles/select.git"
+  }
+}
