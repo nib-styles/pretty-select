@@ -2,6 +2,13 @@
  * Custom Select
  */
 .selectbox {
+  /* Prevent user selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background: white;
   position: relative;
   cursor: pointer;
@@ -57,3 +64,5 @@
     color: #009423; }
   .selectbox__option:last-child {
     border-bottom: 0; }
+
+/*# sourceMappingURL=index.css.map */

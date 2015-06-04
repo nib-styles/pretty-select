@@ -3,6 +3,15 @@
  */
 
 .selectbox {
+
+  /* Prevent user selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   background: hsl(0, 0%, 100%);
   position: relative;
   cursor: pointer;
