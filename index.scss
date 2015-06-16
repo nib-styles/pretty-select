@@ -67,13 +67,11 @@
   transition: all ease 0.25s;
   padding: 10px;
 
-  &:hover {
+  &:focus,
+  &.is-focussed {
     background: hsl(0, 0%, 97%);
     color: hsl(134, 100%, 29%);
   }
-
-  &:focus,
-  &.is-focussed {}
 
   &:last-child {
     border-bottom: 0;
