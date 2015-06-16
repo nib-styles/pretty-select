@@ -19,14 +19,11 @@
   text-align: left;
   vertical-align: middle;
   display: inline-block;
-
-  min-width: 270px;
 }
 
 .selectbox__selected {
-  color: hsl(134, 100%, 29%);
   line-height: 40px;
-  padding: 0 10px;
+  padding: 0 30px 0 10px;
 
   .selectbox &:after {
     content: '';
