@@ -54,7 +54,7 @@
   color: #545454;
   transition: all ease 0.25s;
   padding: 10px; }
-  .menu__item:focus, .menu__item.is-focussed {
+  .menu__item:focus, .menu__item.is-focused {
     background: #f7f7f7;
     color: #009423; }
   .menu__item:last-child {
