@@ -2,9 +2,18 @@
  * Custom Select
  */
 
-.selectbox {
+.select {
 
-  /* Prevent user selection */
+  display: inline-block;
+  min-width: 6em;
+  cursor: pointer;
+  color: hsl(0, 0%, 27%);
+  text-align: left;
+  text-transform: none;
+  vertical-align: middle;
+  background: hsl(0, 0%, 100%);
+
+  //prevent user selection
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -12,76 +21,63 @@
   -ms-user-select: none;
   user-select: none;
 
-  background: hsl(0, 0%, 100%);
-  position: relative;
-  cursor: pointer;
-  text-transform: none;
-  text-align: left;
-  vertical-align: bottom;
-  display: inline-block;
+}
 
-  min-width: 270px;
+.select__input {
+
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 32px 0 10px;
 
   &:after {
     content: '';
     position: absolute;
-    top:18px;
-    right: 15px;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 8px solid hsl(0, 0%, 27%);
-  }
-
-  &.is-open:after {
     top: 16px;
+    right: 10px;
+    border-top: 8px solid hsl(0, 0%, 27%);
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 8px solid hsl(0, 0%, 27%);
-    border-top: 0;
+    //transition: transform 0.5s ease;
   }
+
+  .select.is-open &:after {
+    transform: rotate(-180deg);
+  }
+
 }
 
-.selectbox__selected {
-  color: hsl(134, 100%, 29%);
-  line-height: 20px;
-  padding: 10px;
-  height: 20px;
-}
+.menu {
 
-.selectbox__menu {
+  overflow: hidden;
   box-sizing: border-box;
   position: absolute;
-  overflow: hidden;
-  top: 40px;
-  left: 0;
-  transition: all ease 0.5s;
-  width: 100%;
-  background-color: hsl(0, 0%, 100%);
-  border: 1px solid transparent;
   max-height: 0;
+  min-width: 6em;
+  background-color: hsl(0, 0%, 100%);
+  transition: all ease 0.5s;
 
-  .selectbox.is-open & {
+  &.is-open {
     max-height: 300px;
-    border: 1px solid hsl(0, 0%, 87%);
     box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
   }
+
 }
 
-.selectbox__option {
-  border-bottom: 1px solid hsl(0, 0%, 87%);
-  color: hsl(0, 0%, 33%);
-  transition: all ease 0.25s;
+.menu__item {
+
   padding: 10px;
+  color: hsl(0, 0%, 33%);
+  border-bottom: 1px solid hsl(0, 0%, 87%);
+  transition: all ease 0.25s;
 
-  &:hover {
-    background: hsl(0, 0%, 97%);
+  &.is-focused {
     color: hsl(134, 100%, 29%);
+    background: hsl(0, 0%, 97%);
   }
-
-  &:focus,
-  &.is-focussed {}
 
   &:last-child {
     border-bottom: 0;
   }
+
 }

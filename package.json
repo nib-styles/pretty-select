@@ -1,7 +1,15 @@
 {
   "name": "@nib-styles/select",
-  "version": "0.1.1",
+  "version": "1.0.0",
+  "keywords": [
+    "browser",
+    "select"
+  ],
+  "description": "Styles for a <select> written in pure HTML/JS so it can be styled nicely - unlike native ones. ",
   "main.css": "index.css",
+  "scripts": {
+    "build": "sass index.scss > index.css"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:nib-styles/select.git"

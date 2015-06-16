@@ -1,68 +1,59 @@
 /*
  * Custom Select
  */
-.selectbox {
-  /* Prevent user selection */
+.select {
+  display: inline-block;
+  min-width: 6em;
+  cursor: pointer;
+  color: #454545;
+  text-align: left;
+  text-transform: none;
+  vertical-align: middle;
+  background: white;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  background: white;
+  user-select: none; }
+
+.select__input {
   position: relative;
-  cursor: pointer;
-  text-transform: none;
-  text-align: left;
-  vertical-align: bottom;
-  display: inline-block;
-  min-width: 270px; }
-  .selectbox:after {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 32px 0 10px; }
+  .select__input:after {
     content: '';
     position: absolute;
-    top: 18px;
-    right: 15px;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 8px solid #454545; }
-  .selectbox.is-open:after {
     top: 16px;
+    right: 10px;
+    border-top: 8px solid #454545;
     border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 8px solid #454545;
-    border-top: 0; }
+    border-right: 6px solid transparent; }
+  .select.is-open .select__input:after {
+    transform: rotate(-180deg); }
 
-.selectbox__selected {
-  color: #009423;
-  line-height: 20px;
-  padding: 10px;
-  height: 20px; }
-
-.selectbox__menu {
+.menu {
+  overflow: hidden;
   box-sizing: border-box;
   position: absolute;
-  overflow: hidden;
-  top: 40px;
-  left: 0;
-  transition: all ease 0.5s;
-  width: 100%;
+  max-height: 0;
+  min-width: 6em;
   background-color: white;
-  border: 1px solid transparent;
-  max-height: 0; }
-  .selectbox.is-open .selectbox__menu {
+  transition: all ease 0.5s; }
+  .menu.is-open {
     max-height: 300px;
-    border: 1px solid #dedede;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
 
-.selectbox__option {
-  border-bottom: 1px solid #dedede;
+.menu__item {
+  padding: 10px;
   color: #545454;
-  transition: all ease 0.25s;
-  padding: 10px; }
-  .selectbox__option:hover {
-    background: #f7f7f7;
-    color: #009423; }
-  .selectbox__option:last-child {
+  border-bottom: 1px solid #dedede;
+  transition: all ease 0.25s; }
+  .menu__item.is-focused {
+    color: #009423;
+    background: #f7f7f7; }
+  .menu__item:last-child {
     border-bottom: 0; }
 
 /*# sourceMappingURL=index.css.map */
