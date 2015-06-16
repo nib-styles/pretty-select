@@ -22,7 +22,7 @@
   height: 40px;
   line-height: 40px;
   padding: 0 32px 0 10px; }
-  .select__input:after {
+  .select .select__input:after {
     content: '';
     position: absolute;
     top: 16px;
