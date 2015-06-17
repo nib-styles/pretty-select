@@ -56,10 +56,12 @@
   min-width: 6em;
   background-color: hsl(0, 0%, 100%);
   transition: all ease 0.5s;
+  z-index: 1;
 
   &.is-open {
-    max-height: 300px;
+    max-height: 360px;
     box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
+    overflow-y: auto;
   }
 
 }
