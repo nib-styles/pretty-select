@@ -49,6 +49,7 @@
 
 .menu {
 
+
   overflow: hidden;
   box-sizing: border-box;
   position: absolute;
@@ -56,6 +57,7 @@
   background-color: hsl(0, 0%, 100%);
 
   &.is-open {
+    z-index: 1;
     box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
   }
 
@@ -69,7 +71,7 @@
   }
 
   .csstransitions &.is-open {
-    max-height: 300px;
+    max-height: 360px;
   }
 
   .no-csstransitions &.is-open {

@@ -40,6 +40,7 @@
   min-width: 6em;
   background-color: white; }
   .menu.is-open {
+    z-index: 1;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   .csstransitions .menu {
     max-height: 0;
@@ -47,7 +48,7 @@
   .no-csstransitions .menu {
     display: none; }
   .csstransitions .menu.is-open {
-    max-height: 300px; }
+    max-height: 360px; }
   .no-csstransitions .menu.is-open {
     display: block; }
 
