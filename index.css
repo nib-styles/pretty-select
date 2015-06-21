@@ -37,19 +37,26 @@
   overflow: hidden;
   box-sizing: border-box;
   position: absolute;
-  max-height: 0;
   min-width: 6em;
-  background-color: white;
-  transition: all ease 0.5s; }
+  background-color: white; }
   .menu.is-open {
-    max-height: 300px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .csstransitions .menu {
+    max-height: 0;
+    transition: all ease 0.5s; }
+  .no-csstransitions .menu {
+    display: none; }
+  .csstransitions .menu.is-open {
+    max-height: 300px; }
+  .no-csstransitions .menu.is-open {
+    display: block; }
 
 .menu__item {
   padding: 10px;
   color: #545454;
-  border-bottom: 1px solid #dedede;
-  transition: all ease 0.25s; }
+  border-bottom: 1px solid #dedede; }
+  .csstransitions .menu__item {
+    transition: all ease 0.25s; }
   .menu__item.is-focused {
     color: #009423;
     background: #f7f7f7; }

@@ -52,14 +52,28 @@
   overflow: hidden;
   box-sizing: border-box;
   position: absolute;
-  max-height: 0;
   min-width: 6em;
   background-color: hsl(0, 0%, 100%);
-  transition: all ease 0.5s;
 
   &.is-open {
-    max-height: 300px;
     box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
+  }
+
+  .csstransitions & {
+    max-height: 0;
+    transition: all ease 0.5s;
+  }
+
+  .no-csstransitions & {
+    display: none;
+  }
+
+  .csstransitions &.is-open {
+    max-height: 300px;
+  }
+
+  .no-csstransitions &.is-open {
+    display: block;
   }
 
 }
@@ -69,7 +83,10 @@
   padding: 10px;
   color: hsl(0, 0%, 33%);
   border-bottom: 1px solid hsl(0, 0%, 87%);
-  transition: all ease 0.25s;
+
+  .csstransitions & {
+    transition: all ease 0.25s;
+  }
 
   &.is-focused {
     color: hsl(134, 100%, 29%);
